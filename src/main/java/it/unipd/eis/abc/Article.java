@@ -1,4 +1,4 @@
-package it.unipd.eis;
+package it.unipd.eis.abc;
 
 /**
  * Struttura di un articolo di giornale online con teso e body
