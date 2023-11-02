@@ -1,13 +1,13 @@
 package it.unipd.eis.abc;
 
 /**
- * Hello world!
+ * Classe per eseguire il programma e gestire l'interazione dell'utente con la CLI (Command Line Interface)
  *
  */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+
     }
 }
