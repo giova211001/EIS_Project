@@ -9,10 +9,9 @@ public class Article {
     private String body;
 
     //costruttore della classe
-    public Article() {
+    public Article() { }
 
-    }
-
+    //costruttore con parametri della classe
     public Article(String title, String body){
 
         this.title = title;
