@@ -32,6 +32,7 @@ public class Deserializer {
         //creo un oggetto di tipo Gson
         Gson gson = new Gson();
         //creo un tipo list_art che rappresenta un tipo di dato per la mia lista di Article
+        //per ottenere lo stesso tipo per tutti gli oggetti della lista tramite il metodo .getType()
         Type list_art = new TypeToken<List<Article>>(){}.getType();
         //effettuo la deserializzazione tramite il metodo fromJson
         List<Article> articles = gson.fromJson(fr, list_art);
