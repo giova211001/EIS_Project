@@ -68,7 +68,7 @@ public class CSV {
                         String[] columns = line.split(",");
                         String title = columns[2];
                         String body = columns[3];
-                        articles.add(new Article(title, body));
+                        articles.add(new Article(title, body, "CSV"));
                     }
 
                 }catch (FileNotFoundException e) {
