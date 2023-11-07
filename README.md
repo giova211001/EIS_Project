@@ -10,7 +10,7 @@ più “importanti” nell’insieme degli articoli scaricati.
  - Gestire la persistenza dei dati (più sorgenti diverse dovrebbero essere memorizzate in file con formato uguale)
  - Gestire l'input dell'utente tramite CLI
  - Creare classe per estrarre termini e loro peso
- - Capire se per *peso* si intenda:
+ - Capire se per **peso** si intenda:
    - Quante volte appare la parola in tutti gli articoli
    - Oppure in quanti articoli differenti appare quella parola
  
