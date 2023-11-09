@@ -21,6 +21,11 @@ public class App
 
         action.setRequired(true);
         opt.addOptionGroup(action);
+
+        //importo tutte le possibili [options] per download
+        opt.addOption(new Option("C", true, "CSV file"));
+        opt.addOption(new Option("G", true, "TheGuardian file"));
+        opt.addOption(new Option("A", true, "All files"));
         CommandLine cmd;
         HelpFormatter formatter = new HelpFormatter();
 
@@ -40,8 +45,19 @@ public class App
         {
             formatter.printHelp("App -{d,de,e,h} [options]", opt);
         }
+        //OPZIONE: download
         else if(cmd.hasOption("d"))
         {
+            //TODO Scaricare gli articoli dalle sorgenti presenti tramite la query passata come parametro
+            // Si potrebbe fare che viene chiesto all'utente se vuole scaricare gli articoli
+            // 1) "C" -> solo dal file CSV
+            // 2) "G" -> solo dalle API del TheGuardian
+            // 3) "A" -> da entrambi
+            //CLI fatta nel seguente modo -d nuclear
+            if(cmd.hasOption("C"))
+            {
+                System.out.println("Dentro scaricamento in modalità CSV file");
+            }
             System.out.print("Sto scaricando (d) la query che mi è stata fatta =  "+cmd.getOptionValue("d"));
         }
         else if(cmd.hasOption("de"))
