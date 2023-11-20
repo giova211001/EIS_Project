@@ -38,7 +38,7 @@ public class App
             e.printStackTrace();
             System.err.println("ERROR - Parsing errato");
             System.err.println(e.getMessage());
-            formatter.printHelp("App -{d,de,e,hp} [options]", opt);
+            formatter.printHelp("App -{d,de,e,h} [options]", opt);
             return;
 
         }
@@ -76,7 +76,7 @@ public class App
         }
         if (cmd.hasOption("e") || cmd.hasOption("de"))
         {
-            System.out.println("Estrazione dei frequenti più importanti dagli articoli scaricati ...");
+            System.out.println("Estrazione dei termini più frequenti dagli articoli scaricati ...");
             // TODO estrazione dei termini più frequenti
             System.out.println("Estrazione completata!");
         }
