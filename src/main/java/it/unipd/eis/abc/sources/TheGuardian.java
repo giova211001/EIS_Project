@@ -54,24 +54,30 @@ public class TheGuardian {
      * Articoli in un ArrayList
      * @return Array di Articoli salvati in formato Article
      */
-    public Article[] getArticles() throws IOException {
+    public Article[] getArticles() {
         HttpClient httpClient = HttpClients.createDefault();
         HttpGet httpGet = new HttpGet(createUrl("nuclear+power"));
 
-        //lancia eccezione IOException
-        HttpResponse httpResponse = httpClient.execute(httpGet);
-        String response = readableFormat(EntityUtils.toString(httpResponse.getEntity()));
+        try {
+            //lancia eccezione IOException
+            HttpResponse httpResponse = httpClient.execute(httpGet);
+            String response = readableFormat(EntityUtils.toString(httpResponse.getEntity()));
 
-        //leggo all'interno del JSON tramite ObjectMapper
-        ObjectMapper mapper = new ObjectMapper();
-        JsonNode root = mapper.readTree(response);
-        JsonNode result = root.get("response").get("results");
+            //leggo all'interno del JSON tramite ObjectMapper
+            ObjectMapper mapper = new ObjectMapper();
+            JsonNode root = mapper.readTree(response);
+            JsonNode result = root.get("response").get("results");
 
-        for(JsonNode n: result)
-        {
-            String title = n.get("webTitle").asText();
-            String body = n.get("fields").get("bodyText").asText();
-            articles.add(new Article(title, body, "TheGuardian"));
+
+            for(JsonNode n: result)
+            {
+                String title = n.get("webTitle").asText();
+                String body = n.get("fields").get("bodyText").asText();
+                articles.add(new Article(title, body, "TheGuardian"));
+            }
+
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
         }
 
         return articles.toArray(new Article[0]);

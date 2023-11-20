@@ -19,7 +19,7 @@ public class Serializer {
      * @param articles Array con tutti gli articoli presenti da tutte le sorgenti
      * @see com.fasterxml.jackson.databind.ObjectMapper
      */
-    public void Article_to_JSON(Article[] articles)
+    public static void Article_to_JSON(Article[] articles)
     {
         //controllo che array non sia nullo o non abbia dimensione uguale a zero
         if(articles.length != 0 && articles != null)

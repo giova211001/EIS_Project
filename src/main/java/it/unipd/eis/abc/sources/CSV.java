@@ -41,7 +41,7 @@ public class CSV {
 
     //metodo per recuperare gli articoli dal file CSV
     //TODO inserire Article[] al posto di void, l'ho messo solo affinchè non dia errore
-    public void getArticles() throws IOException {
+    public Article[] getArticles() /*throws IOException*/ {
         //rappresenta tutti i file presenti nella directory path_file
         File[] files = new File(path_file).listFiles();
         if(files != null && files.length != 0)
@@ -50,7 +50,7 @@ public class CSV {
             {
                 //prelevo il percorso di ogni singolo file nella cartella
                 String single_path = f.getAbsolutePath();
-                System.out.println("FilePath = " + single_path);
+                // System.out.println("FilePath = " + single_path);
                 boolean isFirstLine = true;
                 int item = 1;
 
@@ -75,7 +75,9 @@ public class CSV {
                     e.printStackTrace();
                 }
             }
+
         }
+        return articles.toArray(new Article[0]);
     }
 
 
