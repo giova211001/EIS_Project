@@ -24,7 +24,7 @@ public class Deserializer {
      * @return Article[] articles, lista di oggetti di tipo Article
      * @see com.google.gson.Gson;
      */
-    public Article[] JSON_to_Article(String path) throws FileNotFoundException {
+    public static Article[] JSON_to_Article(String path) throws FileNotFoundException {
         //prelevo il file che contiene la stringa JSON da deserializzare
         File json = new File(path);
         //per la lettura del file
