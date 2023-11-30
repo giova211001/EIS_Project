@@ -9,6 +9,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
+/**
+ * Classe che serve ad ottenere i 50 termini più frequenti dagli articoli precedentemente scaricati,
+ * insieme al loro peso (ovvero il numero di documenti in cui appare)
+ */
 public class WordCounter {
 
     private static final String STOPLIST_FILE = "./assets/english_stoplist_v1.txt";
@@ -71,8 +75,8 @@ public class WordCounter {
         String toSplit = (article.getTitle() + " " + article.getBody()).toLowerCase();
 
         Collections.addAll(words, toSplit.split("[^a-z]+"));
-        System.out.println(words);
-        words.removeIf(stopList::contains);
+        words.removeIf(stopList::contains); // rimuove dal set gli elementi presenti nella stopList
+        words.remove(""); // rimuovo eventuali stringhe vuote aggiunte da split
 
         return words;
     }
