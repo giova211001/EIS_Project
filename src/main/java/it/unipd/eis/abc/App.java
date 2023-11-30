@@ -1,6 +1,7 @@
 package it.unipd.eis.abc;
 
 import it.unipd.eis.abc.tools.Downloader;
+import it.unipd.eis.abc.tools.WordCounter;
 import org.apache.commons.cli.*;
 
 /**
@@ -77,7 +78,7 @@ public class App
         if (cmd.hasOption("e") || cmd.hasOption("de"))
         {
             System.out.println("Estrazione dei termini più frequenti dagli articoli scaricati ...");
-            // TODO estrazione dei termini più frequenti
+            WordCounter.getFrequency();
             System.out.println("Estrazione completata!");
         }
 
