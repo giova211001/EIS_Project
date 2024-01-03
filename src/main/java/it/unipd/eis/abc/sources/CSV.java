@@ -40,7 +40,6 @@ public class CSV {
     }
 
     //metodo per recuperare gli articoli dal file CSV
-    //TODO inserire Article[] al posto di void, l'ho messo solo affinchè non dia errore
     public Article[] getArticles() /*throws IOException*/ {
         //rappresenta tutti i file presenti nella directory path_file
         File[] files = new File(path_file).listFiles();
