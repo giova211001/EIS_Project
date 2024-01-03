@@ -16,22 +16,31 @@ import java.util.*;
 public class WordCounter {
 
     private static final String STOPLIST_FILE = "./assets/english_stoplist_v1.txt";
-    private static final List<String> stopList = loadStopList();
+    public static final List<String> stopList = loadStopList();
 
     /**
      * Salva in un file txt i 50 termini più frequenti dagli articoli precedentemente scaricati,
      * insieme al loro peso (ovvero il numero di documenti in cui appare).
      */
     public static void getFrequency() {
-        Map<String, Integer> wordFrequencyMap = new HashMap<>();
         Article[] articles = new Article[] {};
 
         // reperisco gli articoli dal file JSON
         try {
             articles = Deserializer.JSON_to_Article("./assets/articles.json");
+            getFrequency(articles);
         } catch (FileNotFoundException e) {
             System.err.println("File JSON contenente gli articoli non trovato");
         }
+    }
+
+    /**
+     * Salva in un file txt i 50 termini più frequenti dagli articoli indicati.
+     * @param articles articoli da analizzare.
+     */
+    public static void getFrequency(Article[] articles) {
+
+        Map<String, Integer> wordFrequencyMap = new HashMap<>();
 
         // conteggio parole piu' frequenti da articoli
         for (Article article: articles) {
@@ -54,7 +63,7 @@ public class WordCounter {
             });
 
 
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 50 && i < sortedList.size(); i++)
                 writer.write(sortedList.get(i).getKey() + " " + sortedList.get(i).getValue() + "\n");
 
             writer.close();
