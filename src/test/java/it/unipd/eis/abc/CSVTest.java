@@ -2,7 +2,8 @@ package it.unipd.eis.abc;
 
 import it.unipd.eis.abc.analyze.Serializer;
 import it.unipd.eis.abc.sources.CSV;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
 import java.util.Random;

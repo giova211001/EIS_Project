@@ -3,7 +3,7 @@ package it.unipd.eis.abc;
 
 import it.unipd.eis.abc.analyze.Deserializer;
 import it.unipd.eis.abc.analyze.Serializer;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
