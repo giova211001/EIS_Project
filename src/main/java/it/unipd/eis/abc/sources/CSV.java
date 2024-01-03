@@ -2,11 +2,10 @@ package it.unipd.eis.abc.sources;
 
 import com.opencsv.CSVReader;
 import it.unipd.eis.abc.Article;
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVRecord;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -40,7 +39,6 @@ public class CSV {
     }
 
     //metodo per recuperare gli articoli dal file CSV
-    //TODO inserire Article[] al posto di void, l'ho messo solo affinchè non dia errore
     public Article[] getArticles() /*throws IOException*/ {
         //rappresenta tutti i file presenti nella directory path_file
         File[] files = new File(path_file).listFiles();
@@ -51,6 +49,24 @@ public class CSV {
                 //prelevo il percorso di ogni singolo file nella cartella
                 String single_path = f.getAbsolutePath();
                 // System.out.println("FilePath = " + single_path);
+
+                try {
+                    Reader in = new FileReader(single_path);
+                    Iterable<CSVRecord> records = CSVFormat.EXCEL.withFirstRecordAsHeader().parse(in);
+                    for(CSVRecord r: records)
+                    {
+                        Article a = new Article();
+                        a.setTitle(r.get("Title"));
+                        a.setBody(r.get("Body"));
+                        a.setSource("CSV");
+                        articles.add(a);
+                    }
+                } catch (FileNotFoundException e) {
+                    throw new RuntimeException(e);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                /*
                 boolean isFirstLine = true;
                 int item = 1;
 
@@ -67,13 +83,18 @@ public class CSV {
 
                         String[] columns = line.split(",");
                         String title = columns[2];
+                        //TODO C'è un problema nel body perchè si ferma alla prima virgola
                         String body = columns[3];
                         articles.add(new Article(title, body, "CSV"));
+
+
                     }
 
                 }catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
+
+                 */
             }
 
         }
