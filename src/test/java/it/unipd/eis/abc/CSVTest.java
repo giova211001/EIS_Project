@@ -68,4 +68,16 @@ public class CSVTest {
         Article randomS = testCsv.getArticles()[randomSource];
         assertEquals("CSV", randomS.getSource());
     }
+
+    @Test
+    public void getArticlesWithoutSources()
+    {
+        //Inserisco un percorso invalido così da non trovare il file
+        CSV invalid = new CSV("no_path_file");
+        Article[] articles = invalid.getArticles();
+        //Verifico che l'array di articoli sia vuoto perchè non ha trovato la sorgente
+        assertEquals(0, articles.length);
+        //Verifico che l'array non sia nullo
+        assertNotNull(articles);
+    }
 }
