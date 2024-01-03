@@ -25,9 +25,13 @@ public class CSVTest {
         testCsv = new CSV(TEST_CSV_PATH);
     }
 
-    //Metodo che controlla la che la ricezione degli articoli avvenga correttamente. Viene testato quindi il
-    // metodo getArticles()
-    //Viene controllato che:
+    /**
+    * Metodo che controlla la che la ricezione degli articoli avvenga correttamente. Viene testato quindi il
+    * metodo getArticles()
+    * Viene controllato che:
+    * @return il numero di parole bla bla
+    *
+     **/
 
     @Test
     public void getArticlesTest()
@@ -69,6 +73,11 @@ public class CSVTest {
         assertEquals("CSV", randomS.getSource());
     }
 
+    /**
+     * Descrizione del metodo qui
+     * @return
+     *
+     */
     @Test
     public void getArticlesWithoutSources()
     {
