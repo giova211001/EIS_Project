@@ -25,9 +25,13 @@ public class CSVTest {
         testCsv = new CSV(TEST_CSV_PATH);
     }
 
-    //Metodo che controlla la che la ricezione degli articoli avvenga correttamente. Viene testato quindi il
-    // metodo getArticles()
-    //Viene controllato che:
+    /**
+    * Metodo che controlla la che la ricezione degli articoli avvenga correttamente. Viene testato quindi il
+    * metodo getArticles()
+    * Viene controllato che:
+    * @return il numero di parole bla bla
+    *
+     **/
 
     @Test
     public void getArticlesTest()
@@ -67,5 +71,22 @@ public class CSVTest {
         int randomSource = rand.nextInt(1000);
         Article randomS = testCsv.getArticles()[randomSource];
         assertEquals("CSV", randomS.getSource());
+    }
+
+    /**
+     * Descrizione del metodo qui
+     * @return
+     *
+     */
+    @Test
+    public void getArticlesWithoutSources()
+    {
+        //Inserisco un percorso invalido così da non trovare il file
+        CSV invalid = new CSV("no_path_file");
+        Article[] articles = invalid.getArticles();
+        //Verifico che l'array di articoli sia vuoto perchè non ha trovato la sorgente
+        assertEquals(0, articles.length);
+        //Verifico che l'array non sia nullo
+        assertNotNull(articles);
     }
 }
