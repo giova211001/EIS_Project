@@ -24,7 +24,7 @@ import java.util.Scanner;
  * Implementazione:
  * Prelevo il file dal path e creo un nuovo oggetto Article per salvare tutti gli articoli presenti nel file
  */
-public class CSV {
+public class CSV implements SourceInterface{
 
     //percorso del file
     private String path_file;
@@ -66,35 +66,6 @@ public class CSV {
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-                /*
-                boolean isFirstLine = true;
-                int item = 1;
-
-                try(Scanner scanner = new Scanner(new File(single_path)))
-                {
-                    while(scanner.hasNextLine())
-                    {
-                        String line = scanner.nextLine();
-                        if(isFirstLine)
-                        {
-                            isFirstLine = false;
-                            continue;
-                        }
-
-                        String[] columns = line.split(",");
-                        String title = columns[2];
-                        //TODO C'è un problema nel body perchè si ferma alla prima virgola
-                        String body = columns[3];
-                        articles.add(new Article(title, body, "CSV"));
-
-
-                    }
-
-                }catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-
-                 */
             }
 
         }

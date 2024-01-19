@@ -22,7 +22,7 @@ import java.util.ArrayList;
  * 2) Ricevere la risposta (in formato JSON)
  * 3) Fare il parsing della risposta JSON (body)
  */
-public class TheGuardian {
+public class TheGuardian implements SourceInterface{
 
     //impostazione dell'URL del The Guardian
     private static String GUARDIAN_URL = "http://content.guardianapis.com/search";
