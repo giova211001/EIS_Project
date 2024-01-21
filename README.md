@@ -8,13 +8,13 @@ più “importanti” nell’insieme degli articoli scaricati.
 ## Come eseguire il progetto
 inserire la chiave personale del guardian nel file ./assets/application properties (al posto di test)
 Per compilare il progetto e creare il file jar:
-'''
+```
 mvn clean compile assembly:single
-'''
+```
 Per eseguire il l'applicazione tramite il file jar:
-'''
+```
 java -jar .\target\EIS_Project-1.0-SNAPSHOT-jar-with-dependencies.jar -de nuclear+power -A
-'''
+```
 
 ## Cose mancanti da fare
  - Gestire la persistenza dei dati (più sorgenti diverse dovrebbero essere memorizzate in file con formato uguale)
