@@ -10,6 +10,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/**
+ * Classe di Test per TheGuardian - controllo che l'ottenimento degli articoli del TheGuardian avvenga in modo corretto
+ */
 public class TheGuardianTest {
 
     private TheGuardian testGuardian;

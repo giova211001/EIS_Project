@@ -15,7 +15,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 /**
- * Classe di Test per WordCounter
+ * Classe di Test per WordCounter - controllo che vengano ottenuti correttamente i 50 termini più frequenti tra
+ * tutti gli articoli presenti
  */
 public class WordCounterTest {
 
