@@ -12,8 +12,11 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Properties;
 
 /**
  * Classe per la gestione degli articoli provenienti dal The Guardian
@@ -31,9 +34,11 @@ public class TheGuardian implements SourceInterface{
     public ArrayList<Article> articles = new ArrayList<>();
 
     //chiave privata per accedere alle API del TheGuardian
-    private String api_key = "test";
+    private static final String api_key = loadKey();
+
     //una query con più di una parola viene concatenata con + (nel nostro caso nuclear + power)
     private String query;
+
     //per reperire il corpo dell'articolo
     private String show_fields = "bodyText";
 
@@ -100,6 +105,30 @@ public class TheGuardian implements SourceInterface{
         JsonElement element = gson.fromJson(response, JsonElement.class);
         String formatted_response = gson.toJson(element);
         return formatted_response;
+    }
+
+    /**
+     * Ricava dal file application.properties la chiave da usare per la richiesta alle API di TheGuardian
+     * @return il valore della chiave
+     */
+    private static String loadKey() {
+        FileInputStream fis = null;
+        Properties prop = new Properties();
+
+        try {
+            fis = new FileInputStream("./assets/application.properties");
+            prop.load(fis);
+
+        } catch (FileNotFoundException e) {
+            System.err.println("File application.properties non trovato");
+            throw new RuntimeException(e);
+
+        } catch (IOException e) {
+            System.err.println("Errore nel caricamento delle proprieta'");
+            throw new RuntimeException(e);
+        }
+
+        return prop.getProperty("api-key");
     }
 
 
