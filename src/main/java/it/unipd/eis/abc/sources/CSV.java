@@ -38,17 +38,20 @@ public class CSV implements SourceInterface{
         this.path_file = path_file;
     }
 
-    //metodo per recuperare gli articoli dal file CSV
-    public Article[] getArticles() /*throws IOException*/ {
+    /** Metodo getArticles() che preleva tutti i file presenti nella directory di cui viene specificato
+     * il percorso e ritorna una lista di oggetti di tipo Article
+     * @return Article[] articles, la lista di articoli
+     */
+    public Article[] getArticles() {
         //rappresenta tutti i file presenti nella directory path_file
         File[] files = new File(path_file).listFiles();
         if(files != null && files.length != 0)
         {
+            //itero sul numero di files presenti nella directory
             for(File f : files)
             {
                 //prelevo il percorso di ogni singolo file nella cartella
                 String single_path = f.getAbsolutePath();
-                // System.out.println("FilePath = " + single_path);
 
                 try {
                     Reader in = new FileReader(single_path);

@@ -82,11 +82,5 @@ public class App
             System.out.println("Estrazione completata!");
         }
 
-        // possibili opzioni
-        // opt.addOption(new Option("cw", true, "Count words"));
-        // opt.addOption(new Option("ca", "nlp-pipeline", true, "CoreNLP"));
-
-
-
     }
 }

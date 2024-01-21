@@ -3,7 +3,8 @@ package it.unipd.eis.abc.sources;
 import it.unipd.eis.abc.Article;
 
 /**
- * Interfaccia per supportare diversi tipi di sorgente
+ * Interfaccia per supportare diversi tipi di sorgente.
+ * Ogni sorgente deve avere un metodo per ottenere gli articoli, ovvero getArticles()
  */
 
 public interface SourceInterface {

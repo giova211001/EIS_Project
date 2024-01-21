@@ -2,8 +2,8 @@ package it.unipd.eis.abc;
 
 /**
  * Struttura di un articolo di giornale online con le informazioni essenziali:
- * - Testo articolo
- * - Corpo articolo
+ * - Titolo articolo (title)
+ * - Corpo articolo (body)
  * - Sorgente di provenienza (CSV o TheGuardian)
  */
 public class Article {

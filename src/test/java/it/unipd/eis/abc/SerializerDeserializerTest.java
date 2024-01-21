@@ -14,8 +14,21 @@ import java.io.FileNotFoundException;
 
 import static org.junit.Assert.*;
 
+/**
+ * Classe per il controllo delle funzioni di serializzazione e deserializzazione
+ */
+
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class SerializerDeserializerTest {
+
+
+    /**
+     * Metodo per il controllo del processo di serializzazione
+     * Il metodo:
+     * - crea una lista di articoli con titolo e corpo di esempio
+     * - verifica che il metodo Article_to_JSON mi effettui la conversione da tipo Article a file JSON
+     * - verifica che venga creato il file .json nella cartella assets
+     */
 
     @Test
     @Order(1) //imposto ordine 1 perchè non posso deserializzare se prima non ho serializzato
@@ -33,9 +46,18 @@ public class SerializerDeserializerTest {
         //A questo punto dovrebbe esserci presente un file .json nella cartella asset
     }
 
+    /**
+     * Metodo per il controllo del processo di deserializzazione
+     * Il metodo:
+     * - verifica che sia presente il file .json nella cartella assets
+     * - verifica che la deserializzazione avvenga correttamente conteggiando gli elementi che vengono salvati
+     * in articles
+     * - verifica che il contenuto degli articoli (title e body) sia corretto
+     * @throws FileNotFoundException
+     */
+
     @Test
     @Order(2)
-    //TODO Non so se va lanciata l'eccezione ??????
     public void DeserializeTest() throws FileNotFoundException {
         //Prelevo il percorso del file .json presente in assets
         File file = new File("./assets/articles.json");

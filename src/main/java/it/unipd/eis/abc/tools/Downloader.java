@@ -7,12 +7,12 @@ import it.unipd.eis.abc.sources.TheGuardian;
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
- * Classe per scaricare gli articoli da diverse fonti e salvarle in formato json,
+ * Classe per scaricare gli articoli da diverse fonti e salvarle in formato JSON,
  * per poter essere successivamente elaborati.
  */
 public class Downloader {
     /**
-     * Salva gli articoli ottenuti tramite le api del the guardian in formato json
+     * Salva gli articoli ottenuti tramite le api del the guardian in formato JSON
      * nel file "assets/articles.json"
      * @param query sezione di testo che gli articoli devono contenere per essere
      *              salvati nel file

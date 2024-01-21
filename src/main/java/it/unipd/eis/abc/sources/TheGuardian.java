@@ -30,10 +30,9 @@ public class TheGuardian implements SourceInterface{
     //array di oggetti della classe Article
     public ArrayList<Article> articles = new ArrayList<>();
 
-    //chiave privata per accedere alle API
-    //la chiave va modificata con la chiave ottenuta dal sito The Guardian
+    //chiave privata per accedere alle API del TheGuardian
     private String api_key = "test";
-    //una query con più di una parola viene concatenata con +
+    //una query con più di una parola viene concatenata con + (nel nostro caso nuclear + power)
     private String query;
     //per reperire il corpo dell'articolo
     private String show_fields = "bodyText";
@@ -44,6 +43,11 @@ public class TheGuardian implements SourceInterface{
         this.query = query;
     }
 
+    /** Metodo createUrl per la creazione dell'url da passare alla richiesta che viene fatta al
+     * TheGuardian
+     * @param q, la query da passare per filtrare il contenuto degli articoli da scaricare
+     * @return l'url per effettuare la richiesta al TheGuardian
+     */
     public String createUrl(String q)
     {
         return GUARDIAN_URL+"?q=" + q + "&api-key=" + api_key + "&show-fields=" + show_fields;

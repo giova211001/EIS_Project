@@ -30,7 +30,7 @@ public class Serializer {
                 ObjectMapper obj = new ObjectMapper();
                 //metodo per visualizzare la stringa output in modo più leggibile
                 obj.configure(SerializationFeature.INDENT_OUTPUT, true);
-                //serializzo e scrivo il valore del JSON in un nuovo file
+                //serializzo e scrivo il valore del JSON in un nuovo file di nome articles.json
                 obj.writeValue(new File("./assets/articles.json"), articles);
 
             }catch (IOException e)
@@ -40,6 +40,7 @@ public class Serializer {
         }
         else
         {
+            // messaggio di errore nel caso non trovassi gli articoli o l'array abbia dimensione nulla
             System.err.println("Articles[] articles vuoto o non disponibile");
             System.exit(1);
         }
