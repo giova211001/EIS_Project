@@ -33,12 +33,3 @@ Ad esempio, per scaricare ed estrarre (-de) articoli da tutte le fonti disponibi
 ```
 java -jar .\target\EIS_Project-1.0-SNAPSHOT-jar-with-dependencies.jar -de nuclear+power -A
 ```
-
-## Cose mancanti da fare
- - Gestire la persistenza dei dati (più sorgenti diverse dovrebbero essere memorizzate in file con formato uguale)
- - Gestire l'input dell'utente tramite CLI
- - Creare classe per estrarre termini e loro peso
- - Capire se per **peso** si intenda:
-   - Quante volte appare la parola in tutti gli articoli
-   - Oppure in quanti articoli differenti appare quella parola
- 
