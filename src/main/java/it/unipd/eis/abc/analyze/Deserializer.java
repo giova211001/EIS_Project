@@ -22,7 +22,7 @@ public class Deserializer {
      * stampa a video
      * @param path, percorso del file che contiene la stringa JSON
      * @return Article[] articles, lista di oggetti di tipo Article
-     * @see com.google.gson.Gson;
+     * @see com.google.gson.Gson
      */
     public static Article[] JSON_to_Article(String path) throws FileNotFoundException {
         //prelevo il file che contiene la stringa JSON da deserializzare
