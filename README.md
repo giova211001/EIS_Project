@@ -10,11 +10,11 @@ Inserire la chiave personale del guardian nel file ./assets/application properti
 
 Per compilare il progetto e creare il file jar:
 ```
-mvn clean compile assembly:single
+mvn package
 ```
 Per eseguire il l'applicazione tramite il file jar:
 ```
-java -jar .\target\EIS_Project-1.0-SNAPSHOT-jar-with-dependencies.jar -{d, de, e, h} <query> -{C, G, A}
+java -jar .\target\EIS_Project-1.0-jar-with-dependencies.jar -{d, de, e, h} <query> -{C, G, A}
 ```
 
 Opzioni disponibili:
@@ -31,5 +31,9 @@ Opzioni disponibili:
 ```
 Ad esempio, per scaricare ed estrarre (-de) articoli da tutte le fonti disponibili (-A) usando la query nuclear+power:
 ```
-java -jar .\target\EIS_Project-1.0-SNAPSHOT-jar-with-dependencies.jar -de nuclear+power -A
+java -jar .\target\EIS_Project-1.0-jar-with-dependencies.jar -de nuclear+power -A
+```
+Per generare il sito, basta eseguire il comando:
+```
+mvn site
 ```
