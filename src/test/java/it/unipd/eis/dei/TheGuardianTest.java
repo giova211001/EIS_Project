@@ -1,8 +1,7 @@
-package it.unipd.eis.abc;
+package it.unipd.eis.dei;
 
-import it.unipd.eis.abc.analyze.Serializer;
-import it.unipd.eis.abc.sources.TheGuardian;
-import it.unipd.eis.abc.tools.Downloader;
+import it.unipd.eis.dei.sources.TheGuardian;
+import it.unipd.eis.dei.tools.Downloader;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

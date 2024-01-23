@@ -1,11 +1,11 @@
-package it.unipd.eis.abc.sources;
+package it.unipd.eis.dei.sources;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
-import it.unipd.eis.abc.Article;
+import it.unipd.eis.dei.Article;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;

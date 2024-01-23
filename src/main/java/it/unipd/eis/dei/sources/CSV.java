@@ -1,13 +1,11 @@
-package it.unipd.eis.abc.sources;
+package it.unipd.eis.dei.sources;
 
-import com.opencsv.CSVReader;
-import it.unipd.eis.abc.Article;
+import it.unipd.eis.dei.Article;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  * Classe per gestire gli articoli di NYTimes da file CSV presenti in nytimes_articles_v2.csv

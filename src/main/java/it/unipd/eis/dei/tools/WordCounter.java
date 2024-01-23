@@ -1,7 +1,7 @@
-package it.unipd.eis.abc.tools;
+package it.unipd.eis.dei.tools;
 
-import it.unipd.eis.abc.Article;
-import it.unipd.eis.abc.analyze.Deserializer;
+import it.unipd.eis.dei.Article;
+import it.unipd.eis.dei.analyze.Deserializer;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -30,7 +30,8 @@ public class WordCounter {
             articles = Deserializer.JSON_to_Article("./assets/articles.json");
             getFrequency(articles);
         } catch (FileNotFoundException e) {
-            System.err.println("File JSON contenente gli articoli non trovato");
+            System.err.println("File JSON contenente gli articoli non trovato, devi prima effetuare l'operazione di scaricamento '-d'");
+            System.exit(1);
         }
     }
 

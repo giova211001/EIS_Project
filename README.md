@@ -2,10 +2,10 @@
 Progetto del corso di Elementi di Ingegneria del Software
 
 Componenti del gruppo:
-- Giovanni Faedo
-- Marco Facco
-- Martino Bissiato
-- Andrea Maluta
+- Giovanni Faedo (2013172)
+- Marco Facco (2008822)
+- Martino Bissiato (2008820)
+- Andrea Maluta (2008792)
 
 ## Consegna del progetto
 Progettare ed implementare un sistema software in grado di

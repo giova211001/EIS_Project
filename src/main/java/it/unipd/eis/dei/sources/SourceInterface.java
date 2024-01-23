@@ -1,6 +1,6 @@
-package it.unipd.eis.abc.sources;
+package it.unipd.eis.dei.sources;
 
-import it.unipd.eis.abc.Article;
+import it.unipd.eis.dei.Article;
 
 /**
  * Interfaccia per supportare diversi tipi di sorgente.

@@ -1,4 +1,4 @@
-package it.unipd.eis.abc.analyze;
+package it.unipd.eis.dei.analyze;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,7 +8,7 @@ import java.util.List;
 
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.Gson;
-import it.unipd.eis.abc.Article;
+import it.unipd.eis.dei.Article;
 
 /**
  * Classe per deserializzare un file JSON in una lista di oggetti della classe Article

@@ -1,7 +1,7 @@
-package it.unipd.eis.abc.analyze;
+package it.unipd.eis.dei.analyze;
 
 import com.fasterxml.jackson.databind.SerializationFeature;
-import it.unipd.eis.abc.Article;
+import it.unipd.eis.dei.Article;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;

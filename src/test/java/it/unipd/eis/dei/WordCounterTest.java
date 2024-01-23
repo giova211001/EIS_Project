@@ -1,6 +1,6 @@
-package it.unipd.eis.abc;
+package it.unipd.eis.dei;
 
-import it.unipd.eis.abc.tools.WordCounter;
+import it.unipd.eis.dei.tools.WordCounter;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 

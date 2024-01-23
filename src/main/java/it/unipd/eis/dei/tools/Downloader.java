@@ -1,9 +1,9 @@
-package it.unipd.eis.abc.tools;
+package it.unipd.eis.dei.tools;
 
-import it.unipd.eis.abc.Article;
-import it.unipd.eis.abc.analyze.Serializer;
-import it.unipd.eis.abc.sources.CSV;
-import it.unipd.eis.abc.sources.TheGuardian;
+import it.unipd.eis.dei.Article;
+import it.unipd.eis.dei.analyze.Serializer;
+import it.unipd.eis.dei.sources.CSV;
+import it.unipd.eis.dei.sources.TheGuardian;
 import org.apache.commons.lang3.ArrayUtils;
 
 /**

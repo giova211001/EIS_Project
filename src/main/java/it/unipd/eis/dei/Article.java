@@ -1,4 +1,4 @@
-package it.unipd.eis.abc;
+package it.unipd.eis.dei;
 
 /**
  * Struttura di un articolo di giornale online con le informazioni essenziali:
