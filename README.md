@@ -1,13 +1,16 @@
 # ProjectEIS
 Progetto del corso di Elementi di Ingegneria del Software
-## Consegna del progetto
+
 Progettare ed implementare un sistema software in grado di
 scaricare (download) articoli da testate giornalistiche online resi
 disponibili da diverse sorgenti e di estrarre e visualizzare i termini
 più “importanti” nell’insieme degli articoli scaricati.
-## Come eseguire il progetto
-Inserire la chiave personale del guardian nel file ./assets/application properties (al posto di test)
 
+## Consegna del progetto
+### Key TheGuardian
+Il programma utilizza una key per comunicare con l'API di The Guardian, ottenibile su https://open-platform.theguardian.com/access.
+Una volta scaricato il progetto, è necessario inserire la chiave personale del TheGuardian nel file ./assets/application.properties (al posto di test).
+### Come compilare ed eseguire il programma
 Per compilare il progetto e creare il file jar:
 ```
 mvn package
