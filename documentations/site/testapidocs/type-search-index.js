@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"it.unipd.eis.dei","l":"CSVTest"},{"p":"it.unipd.eis.dei","l":"SerializerDeserializerTest"},{"p":"it.unipd.eis.dei","l":"TheGuardianTest"},{"p":"it.unipd.eis.dei","l":"WordCounterTest"}];updateSearchResults();
