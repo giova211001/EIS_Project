@@ -79,7 +79,7 @@ public class WordCounterTest {
     }
 
     /**
-     * Controllo che l'ordine in cui i termini con il relativo peso sia corretto,
+     * Controllo che l'ordine in cui i termini vengono salvati (con il relativo peso) sia corretto,
      * ovvero prima i termini con maggiore frequenza - in caso di termini con stessa frequenza
      * l'ordine è alfabetico
      */
