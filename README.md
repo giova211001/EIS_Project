@@ -36,6 +36,7 @@ Ad esempio, per scaricare ed estrarre (-de) articoli da tutte le fonti disponibi
 ```
 java -jar .\target\EIS_Project-1.0-jar-with-dependencies.jar -de nuclear+power -A
 ```
+### Generazione sito
 Per generare il sito, basta eseguire il comando:
 ```
 mvn site
