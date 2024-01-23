@@ -1,6 +1,8 @@
 # ProjectEIS
 Progetto del corso di Elementi di Ingegneria del Software
 
+Link del progetto in GitHub: 
+
 Componenti del gruppo:
 - Giovanni Faedo (2013172)
 - Marco Facco (2008822)
