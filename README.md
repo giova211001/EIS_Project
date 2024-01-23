@@ -1,7 +1,7 @@
 # ProjectEIS
 Progetto del corso di Elementi di Ingegneria del Software
 
-Link del progetto in GitHub: 
+Link del progetto in GitHub: https://github.com/giova211001/EIS_Project.git
 
 Componenti del gruppo:
 - Giovanni Faedo (2013172)
