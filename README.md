@@ -15,7 +15,7 @@ più “importanti” nell’insieme degli articoli scaricati.
 
 ### Key TheGuardian
 Il programma utilizza una key per comunicare con l'API di The Guardian, ottenibile su https://open-platform.theguardian.com/access.
-Una volta scaricato il progetto, è necessario inserire la chiave personale del TheGuardian nel file ./assets/application.properties (al posto di test).
+Una volta scaricato il progetto, è necessario inserire la chiave personale del TheGuardian nel file `./assets/application.properties` (al posto di test).
 ### Come compilare ed eseguire il programma
 Per compilare il progetto e creare il file jar:
 ```
