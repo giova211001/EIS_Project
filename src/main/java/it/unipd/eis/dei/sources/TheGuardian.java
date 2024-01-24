@@ -42,6 +42,10 @@ public class TheGuardian implements SourceInterface{
     //per reperire il corpo dell'articolo
     private String show_fields = "bodyText";
 
+    //campo page-size che mi indica il numero di valori restituiti
+    // (è il massimo valore per effettuare una richiesta valida al TheGuardian)
+    private int pag_size = 200;
+
     //Costruttore della classe
     public TheGuardian(String query)
     {
@@ -55,7 +59,7 @@ public class TheGuardian implements SourceInterface{
      */
     public String createUrl(String q)
     {
-        return GUARDIAN_URL+"?q=" + q + "&api-key=" + api_key + "&show-fields=" + show_fields;
+        return GUARDIAN_URL+"?q=" + q + "&api-key=" + api_key + "&show-fields=" + show_fields + "&page-size=" + pag_size;
     }
 
     /**
